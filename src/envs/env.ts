@@ -1,0 +1,8 @@
+const Env = {
+    CURRENT: 'PROD',
+    BASE_URL: 'https://www.ittendance.com/',
+    SHOULD_ENABLE_FORCE_UPDATE: true,
+    ONESIGNAL_ID: 'a314acb3-b5df-442d-820e-6cfc6731fc70',
+}
+
+export default Env

@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "title": "How do I get started?",
+            "description": "You can download Ittendance on any iOS device running ver. 9.0 and above from the Apple's App Store or Android device running version 4.1 Jelly Bean and above from the Google Play Store. Once downloaded, it is just a matter of following the easy registration process and creating a new team to get started or joining a team you are already a member of."
+        },
+        {
+            "title": "How do I change my password?",
+            "description": "There is a `forgot password` link given at the sign in page which guides you through a step by step process to change your password for future use. A change password link may also be found in your profile page following the same process."
+        },
+        {
+            "title": "How do I update my email address?",
+            "description": "This feature will not be available in Ittendance. In case you wish to change your email address you would need to create a new account using the new email. The old email will remain linked to your first account."
+        },
+        {
+            "title": "How do register a new team on ittendance?",
+            "description": "You can create a new team by simply providing the information required during the sign-up process. Give a name to your team and sign up providing your email. Your email will become the primary owner of the account, and then you will be able to add more members to your team."
+        },
+        {
+            "title": "How do I set up my Team?",
+            "description": "Once you are signed up as a primary owner of the team, you can send email invitations to your team members."
+        },
+        {
+            "title": "How does someone punch in/out?",
+            "description": "Tapping on the punch in button will open up your device's camera where you may take your photo. Once processed, it will be added to your records. In the case of punching out, simply tap the punch out button and follow the same process."
+        },
+        {
+            "title": "How can I add more users?",
+            "description": "Simply sign up and begin adding the email addresses of your team members. The member will be added in your team with a pending status. The status of the member will update when the member generates a password for his/her account using the acceptance link sent via email."
+        },
+        {
+            "title": "What is the difference between paid and free?",
+            "description": "Paid benefits include:\n- Unlimited custom search filters\n- Unlimited reporting data\n- The option to export reports in MS Excel format"
+        },
+        {
+            "title": "Do my team members have to pay for their accounts?",
+            "description": "Not at all. The only one whom will be paying will be the Team Creator."
+        },
+        {
+            "title": "May I have multiple teams on a single account?",
+            "description": "No. Your account may only have 1 team created. You may however create multiple locations for the same team in case your team is spread out across multiple cities/countries.\nIf you wish to create a new team you will have to do so with a new account/email address."
+        },
+        {
+            "title": "Is there a way to have multiple teams with only some being paid?",
+            "description": "Yes, as your paid plan is only linked to your current account, creating another account for another team can be left on a free plan. The catch is that neither team can be linked and you will need two separate accounts and teams."
+        },
+        {
+            "title": "Is my team data linked to my cache and cookies?",
+            "description": "No. All data is saved on the database and has nothing to do with your browsers/apps cache or cookies."
+        },
+        {
+            "title": "How can I update the details on my invoice?",
+            "description": "The invoice that is sent to you daily and monthly is updated automatically depending on how many members were added/removed from your team."
+        },
+        {
+            "title": "When can I add new users / remove old users?",
+            "description": "As a team owner, you can always add/remove members from your team."
+        },
+        {
+            "title": "My business is a multinational entity, do I have to have two separate Team Creators for each office?",
+            "description": "Ittendance allows the same team owner to add multiple office locations in the settings section. Each office can have its own timings and settings. Out of these locations the team owner can select which location is the head office."
+        },
+        {
+            "title": "Is there a way to define departments within my team?",
+            "description": "Yes. Utilizing the tagging feature you may add and associate tags with various employees to signify which teams or departments they are a member of.\n"
+        },
+        {
+            "title": "If I want to apply for my annual leave do I still go through my HR department?",
+            "description": "Technically, yes. Ittendance has a leaves feature through which you may apply for your leaves. This request is sent to whomever is in the HR department as a notification and they are the ones who will approve the leave. There are THREE pre-made leaves options for every team, and more may be created."
+        },
+        {
+            "title": "What are filters? What is their use?",
+            "description": "Filters are a feature within Ittendance that allow the Team Creator to create various settings for the team(s) they are creating. These settings include the ability to update the office start and end time, grace period, the office work days, adding tags to associate the team's various departments with and which tags will be included in the reporting tab. By default, all Team Creators are given three filters; one being a pre-made General Filter (non-editable/cannot be deleted) and the other two filters that can be customized according to your needs. For creating more filters than those provided, the Team Creator must be on a paid plan."
+        },
+        {
+            "title": "When do I set up billing?",
+            "description": "When you sign up online, you'll automatically start using the free version. Through the free version you may enter your billing information at any time in the billing section and switch your account to the paid version and will be charged for the remaining of the month."
+        },
+        {
+            "title": "Does Ittendance have a `remember me` feature?",
+            "description": "While the mobile version does contain a remember me function, the web application refreshes each time the internal timer ends for security purpose thus, having no remember me feature."
+        },
+        {
+            "title": "What forms of payment does Ittendance accept?",
+            "description": "You may pay for Ittendance using any international level credit or debit card. Payments via Visa, MasterCard, and American Express are all accepted."
+        }
+    ]
+}

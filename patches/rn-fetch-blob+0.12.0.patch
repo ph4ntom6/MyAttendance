@@ -1,0 +1,67 @@
+diff --git a/node_modules/rn-fetch-blob/android/build.gradle b/node_modules/rn-fetch-blob/android/build.gradle
+index a4ca7a4..6c689e1 100644
+--- a/node_modules/rn-fetch-blob/android/build.gradle
++++ b/node_modules/rn-fetch-blob/android/build.gradle
+@@ -1,46 +1,30 @@
+-apply plugin: 'com.android.library'
+-
+-def safeExtGet(prop, fallback) {
+-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+-}
+-
+-repositories {
+-    mavenCentral()
+-    jcenter()
+-    google()
+-}
+-
+ buildscript {
+     repositories {
+-        jcenter()
+         google()
++        mavenCentral()   // ← replaces jcenter()
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:3.2.1'
++        classpath("com.android.tools.build:gradle:7.3.1")
+     }
+ }
+ 
++apply plugin: 'com.android.library'
++
+ android {
+-    compileSdkVersion safeExtGet('compileSdkVersion', 28)
+-    buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
++    compileSdk 34        // ← adds missing compileSdk
++    
+     defaultConfig {
+-        minSdkVersion safeExtGet('minSdkVersion', 16)
+-        targetSdkVersion safeExtGet('targetSdkVersion', 28)
+-        versionCode 1
+-        versionName "1.0"
+-    }
+-    buildTypes {
+-        release {
+-            minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+-        }
+-    }
+-    productFlavors {
++        minSdkVersion 16
++        targetSdkVersion 34
+     }
+ }
+ 
++repositories {
++    google()
++    mavenCentral()       // ← replaces jcenter() here too
++}
++
+ dependencies {
+-    implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
+-    //compile 'com.squareup.okhttp3:okhttp:+'
+-    //{RNFetchBlob_PRE_0.28_DEPDENDENCY}
++    implementation 'com.squareup.okhttp3:okhttp:3.12.13'
++    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.13'
+ }
+\ No newline at end of file

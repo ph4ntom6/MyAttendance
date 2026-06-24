@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing 1`] = `
+<View
+  testID="SPANNABLE_TEXT"
+>
+  <Text
+    numberOfLines={0}
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Roboto-Regular",
+          },
+          Object {
+            "color": "#131F30",
+            "fontSize": 27,
+          },
+          Object {
+            "lineHeight": 42,
+          },
+          Object {
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      Male
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Roboto-Regular",
+          },
+          Object {
+            "color": "#131F30",
+            "fontSize": 27,
+          },
+          Object {
+            "lineHeight": 42,
+          },
+          Object {
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      Female
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Roboto-Regular",
+          },
+          Object {
+            "color": "#131F30",
+            "fontSize": 27,
+          },
+          Object {
+            "lineHeight": 42,
+          },
+          Object {
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      Others
+    </Text>
+  </Text>
+</View>
+`;
