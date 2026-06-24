@@ -27,7 +27,6 @@ import { AppLog, TAG } from 'utils/Util';
 import useNotification, { toNotificationData } from 'hooks/useNotification';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import { useAuthApis } from 'repo/auth/AuthApis';
-import packageJson from '../../../../../package.json';
 
 interface Props {}
 
@@ -88,10 +87,23 @@ export const SplashView = React.memo<Props>(() => {
   );
 
   async function requestUserPermission() {
-    const authorizationStatus = await messaging().requestPermission();
-
-    if (authorizationStatus) {
+    const authStatus = await messaging().requestPermission();
+    const enabled =
+      authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+      authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+    if (!enabled) {
+      console.log('Push notification permission denied');
+      return null;
     }
+    // 2. Register device for remote messages FIRST
+    if (!messaging().isDeviceRegisteredForRemoteMessages) {
+      await messaging().registerDeviceForRemoteMessages();
+    }
+
+    // 3. Now safe to get the token
+    const token = await messaging().getToken();
+    console.log('FCM Token:', token);
+    return token;
   }
 
   useEffect(() => {
