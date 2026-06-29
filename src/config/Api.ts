@@ -2,16 +2,17 @@ import Env from 'envs/env';
 
 export default {
   BASE_URL: Env.BASE_URL,
-  API_URL: 'api/v1',
+  API_URL: 'api',
   CHECK_FOCRCE_UPDATE: 'version?platform=android&version=',
 
   // Auth
-  LOGIN_URL: '/auth/login',
-  CREATE_TEAM_URL: '/auth/register',
-  FORGOT_PASSWORD: 'password',
-  LOGOUT_URL: 'logout',
-  VERIFY_URL: 'code',
-  VERIFY_AGAIN_URL: 'code/resend',
+  LOGIN_URL: '/oauth/token',
+  CREATE_TEAM_URL: '/team',
+  FORGOT_PASSWORD: '/password',
+  LOGOUT_URL: '/logout',
+  VERIFY_URL: '/code',
+  VERIFY_AGAIN_URL: '/code/resend',
+
   LEAVE_REQUEST_URL: 'leave_requests',
   GET_ALL_LEAVES_URL: 'leave_request',
   SET_PROFILE_PICTURE_URL: 'user',
