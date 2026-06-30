@@ -31,22 +31,23 @@ const CreateTeamController: FC<Props> = () => {
   const { request: createTeamRequest, loading } = useAuthApis().createTeam;
 
   const handleCreateTeam = usePreventDoubleTap(async () => {
-    // if (requestModel.current === undefined) {
-    //     return
-    // }
-    // requestModel.current.device_type = Platform.OS
-    // const { hasError, errorBody, dataBody } = await createTeamRequest(
-    //     requestModel.current
-    // )
-    // if (hasError || dataBody === undefined) {
-    //     Alert.alert('Please try again', errorBody)
-    //     return
-    // } else {
-    //     navigation.navigate('AccountVerification', {
-    //         email: requestModel.current?.email,
-    //         user: dataBody?.data as SignInResponse,
-    //     })
-    // }
+    if (requestModel.current === undefined) {
+      return;
+    }
+    requestModel.current.device_type = Platform.OS;
+    console.log('DATA===>', requestModel.current);
+    const { hasError, errorBody, dataBody } = await createTeamRequest(
+      requestModel.current,
+    );
+    if (hasError || dataBody === undefined) {
+      Alert.alert('Please try again', errorBody);
+      return;
+    } else {
+      navigation.navigate('AccountVerification', {
+        email: requestModel.current?.email,
+        user: dataBody?.data as SignInResponse,
+      });
+    }
   });
 
   useLayoutEffect(() => {
