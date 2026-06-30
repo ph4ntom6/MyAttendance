@@ -111,7 +111,7 @@ const CameraController: FC<Props> = () => {
           params?.attendanceType === EAttendanceType.PUNCH_IN
             ? 'punch_in'
             : 'punch_out',
-        punch_in_id: '0',
+        punch_in_id: '',
         punch_time: moment().format('hh:mm'),
         punchin_via: 'mobile',
         missing_punch_out: 'false',
@@ -146,7 +146,7 @@ const CameraController: FC<Props> = () => {
       }
     } else {
       setIsLoading(false);
-      //   EventBus.getInstance().fireEvent(EVENT.FETCH_ATTENDANCE);
+      EventBus.getInstance().fireEvent(EVENT.FETCH_ATTENDANCE);
       navigation.goBack();
     }
   });

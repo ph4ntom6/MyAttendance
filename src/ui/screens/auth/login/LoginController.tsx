@@ -33,9 +33,9 @@ const LoginController: FC<Props> = () => {
     if (requestModel.current === undefined) {
       return;
     }
-    // const token = await messaging().getToken();
+    const token = await messaging().getToken();
     // console.log('TOKEN===>', token);
-    // requestModel!.current!.device_token = token;
+    requestModel!.current!.device_token = token;
     const { hasError, dataBody, errorBody } = await signInRequest(
       requestModel.current,
     );

@@ -22,8 +22,8 @@ export const authSlice = createSlice({
     setUser: (state, { payload }: PayloadAction<SignInResponse>) => {
       state.user = payload.user;
       AuthStorage.storeUser(payload);
-      //   console.log('lll', payload?.user);
-      const token = payload?.token;
+      // console.log('payload===>', payload);
+      const token = payload?.token.access_token;
 
       AppLog.log(
         () => 'Resetting Authorization Token: ' + token,
