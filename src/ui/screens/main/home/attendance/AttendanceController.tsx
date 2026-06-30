@@ -25,7 +25,6 @@ import SimpleToast from 'react-native-simple-toast';
 import { AttendanceLeaveApiRequestModel } from 'models/api_requests/AttendanceLeaveApiRequestModel';
 import EventBus from 'react-native-event-bus';
 import dayjs from 'dayjs';
-import attendanceData from './AttendanceData';
 
 let isSameOrAfter = require('dayjs/plugin/isSameOrAfter');
 let customParseFormat = require('dayjs/plugin/customParseFormat');
@@ -143,7 +142,7 @@ const AttendanceController: FC<Props> = () => {
   return (
     <AttendanceView
       openAttendanceDetail={openAttendanceDetail}
-      attendanceData={attendanceData}
+      attendanceData={attendanceList}
       shouldShowProgressBar={loading}
       setDateFields={updatedDates}
       retryCallBack={fetchAttendance}

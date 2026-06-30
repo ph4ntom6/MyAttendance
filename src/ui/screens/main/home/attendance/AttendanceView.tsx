@@ -53,10 +53,10 @@ export const AttendanceView: FC<Props> = ({
   return (
     <Screen style={styles.container} requiresSafeArea={false}>
       <DateFields setDateFields={setDateFields} />
-      {/* <FlexItems
+      <FlexItems
         lowerTextArray={lowerTextArray}
         attendanceData={attendanceData}
-      /> */}
+      />
       <FlatListWithPb
         style={styles.listContainer}
         data={attendanceData?.records!}
