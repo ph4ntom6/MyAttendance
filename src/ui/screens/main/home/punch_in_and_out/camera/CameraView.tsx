@@ -78,12 +78,6 @@ export const CameraView: FC<Props> = ({
     askPermission();
   }, [requestPermission, navigation]);
 
-  // ✅ debug logs
-  useEffect(() => {
-    console.log('hasPermission:', hasPermission);
-    console.log('device:', device);
-  }, [hasPermission, device]);
-
   const handleCapture = useCallback(async () => {
     setIsLoading(true);
     try {
