@@ -90,7 +90,9 @@ export const useApi = <
   Object.assign(result.current, { data, error, loading, request });
 
   const getErrorMessage = (response: any) => {
-    let message = response?.message ?? '';
+    let message =
+      response?.message ??
+      'An unexpected error occurred. Please check your internet connection';
     if (response?.messages) {
       message = '';
       Object.values(response.messages).map(value => {
