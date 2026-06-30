@@ -54,15 +54,15 @@ const LoginController: FC<Props> = () => {
       } else {
         dispatch(setUser(dataBody.data));
       }
-      await Promise.all([
-        crashlytics().setUserId(`${dataBody.data.user.id}`),
-        crashlytics().setAttributes({
-          role: 'admin',
-          followers: '13',
-          email: dataBody.data.user.email,
-          username: dataBody.data.user.full_name,
-        }),
-      ]);
+      // await Promise.all([
+      //   crashlytics().setUserId(`${dataBody.data.user.id}`),
+      //   crashlytics().setAttributes({
+      //     role: 'admin',
+      //     followers: '13',
+      //     email: dataBody.data.user.email,
+      //     username: dataBody.data.user.full_name,
+      //   }),
+      // ]);
     }
     // dispatch(
     //   setUser({
